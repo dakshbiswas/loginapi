@@ -7,38 +7,42 @@ Project structure
 Since behave is an opinionated framework, it has a very opinionated project structure. All code must be located under a directory named “features”. Gherkin feature files and the “environment.py” file for hooks must appear under “features”, and step definition modules must appear under “features/steps”. Configuration files can store common execution settings and even override the path to the “features” directory.
 Note: Step definition module names do not need to be the same as feature file names. Any step definition can be used by any feature file within the same project.
 
+**Project Structure**
 
-[project root directory]
-|‐‐ [product code packages]
-|-- features
-|   |-- environment.py
-|   |-- *.feature
-|   `-- steps
-|       `-- *_steps.py
-`-- [behave.ini|.behaverc|tox.ini|setup.cfg]
+[project root directory]<br>
+|‐‐-- [product code packages]<br>
+|---- features<br>
+|   |---- environment.py<br>
+|   |---- *.feature<br>
+|   |---- steps<br>
+|   |   |--*steps.py<br>
+|---- [behave.ini|.behaverc|tox.ini|setup.cfg]<br>
+ 
 
+**Software Requirements**
 
-**Software requirements**
+- Pycharm
+- Python3
+- Selenium
+- behave
+- allure-behave
 
--Pycharm
--Python3
--Selenium
--behave
--allure-behave
 
 **Installation**
 
-pip install behave
-pip install allure-behave
+- pip install behave
+- pip install allure-behave
 
-**How to run the test cases**
+**Running the test cases**
 
-behave (for running all the feature files in the project)
-behave “path/of/feature/file/to/run” (to run a particular feature file)
+- behave                               (for running all the feature files in the project)
+- behave “feature/example.feature” (to run a particular feature file)
 
-**How to generate allure reports**
 
-behave -f allure_behave.formatter:AllureFormatter -o %allure_result_folder% ./features
- allure serve %allure_result_folder%
+**Generating allure reports**
+
+- behave -f allure_behave.formatter:AllureFormatter -o %allure_result_folder% ./features
+- allure serve %allure_result_folder%
+
 
 
