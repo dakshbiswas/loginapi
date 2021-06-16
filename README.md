@@ -13,7 +13,7 @@ Note: Step definition module names do not need to be the same as feature file 
 |---- Features<br>
 |   |---- environment.py<br>
 |   |---- features<br>
-|   |---- *.feature<br>
+|   |   |--*.feature<br>
 |   |---- steps<br>
 |   |   |--*steps.py<br>
 |---- [behave.ini|.behaverc|tox.ini|setup.cfg]<br>
