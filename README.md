@@ -10,8 +10,9 @@ Note: Step definition module names do not need to be the same as feature file 
 
 [project root directory]<br>
 |‐‐-- [product code packages]<br>
-|---- features<br>
+|---- Features<br>
 |   |---- environment.py<br>
+|   |---- features<br>
 |   |---- *.feature<br>
 |   |---- steps<br>
 |   |   |--*steps.py<br>
@@ -35,7 +36,7 @@ Note: Step definition module names do not need to be the same as feature file 
 **Running the test cases**
 
 - behave                               (for running all the feature files in the project)
-- behave “feature/example.feature” (to run a particular feature file)
+- behave “Feature/feature/example.feature” (to run a particular feature file)
 
 
 **Generating allure reports**
