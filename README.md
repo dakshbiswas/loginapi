@@ -45,4 +45,5 @@ Note: Step definition module names do not need to be the same as feature file 
 - allure serve %allure_result_folder%
 
 
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/42156397/122174608-7a7c7c80-cea0-11eb-9f22-ca71fe28198e.gif)
 
