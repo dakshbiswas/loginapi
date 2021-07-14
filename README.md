@@ -9,15 +9,28 @@ Note: Step definition module names do not need to be the same as feature file 
 **Project Structure**
 
 [project root directory]<br>
-|‐‐-- [product code packages]<br>
+|‐‐-- allure_reports<br>
+|‐‐-- Drivers<br>
+|   |---- *.exe<br>
 |---- Features<br>
 |   |---- environment.py<br>
 |   |---- features<br>
 |   |   |--*.feature<br>
 |   |---- steps<br>
 |   |   |--*steps.py<br>
-|---- [behave.ini|.behaverc|tox.ini|setup.cfg]<br>
+|---- Locators<br>
+|   |---- *_Locators.py<br>
+|---- pageactions<br>
+|   |---- functions.py<br>
  
+ **Project Structure explanation**
+ 
+ 
+ - The reports generated from the command described below will generate the reports in the Allure_reports directory.<br>
+ - All the Drivers are kept in the drivers folder.<br>
+ - The feature files and the step files are kept in the folders with the respective names under the Features directory which also consists of the file environment.py.<br>
+ - All the locators of different web pages have been separated and kept inside the Locators directory for clear understanding and modularity.<br>
+ - The all common functions which are being used for automation in the step files are kept in files inside the pageactions directory.
 
 **Software Requirements**
 
