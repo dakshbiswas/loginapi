@@ -22,15 +22,19 @@ Note: Step definition module names do not need to be the same as feature file 
 |   |---- *_Locators.py<br>
 |---- pageactions<br>
 |   |---- functions.py<br>
+|---- Logs<br>
+|---- Screenshots<br>
  
  **Project Structure explanation**
  
  
- - The reports generated from the command described below will generate the reports in the Allure_reports directory.<br>
+ - The reports generated from the command described below will generate the reports in the allure_reports directory.<br>
  - All the Drivers are kept in the drivers folder.<br>
  - The feature files and the step files are kept in the folders with the respective names under the Features directory which also consists of the file environment.py.<br>
  - All the locators of different web pages have been separated and kept inside the Locators directory for clear understanding and modularity.<br>
  - The all common functions which are being used for automation in the step files are kept in files inside the pageactions directory.
+ - Everytime we run the tests, a log file will be generated in the Logs directory about the current test results and automatically the previous logs will be deleted.
+ - When certain tests fail, the screenshot will be captured and stored in the Screenshots directory followed by the deletion of the previous screenshots.
 
 **Software Requirements**
 
@@ -49,7 +53,8 @@ Note: Step definition module names do not need to be the same as feature file 
 **Running the test cases**
 
 - behave                               (for running all the feature files in the project)
-- behave “Feature/feature/example.feature” (to run a particular feature file)
+- behave Feature/feature/example.feature (to run a particular feature file)
+- behave --tags=tagname Feature/feature/example.feature (To run particular scenarios with tags "@tagname")
 
 
 **Generating allure reports**
