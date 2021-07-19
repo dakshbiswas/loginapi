@@ -24,6 +24,7 @@ Note: Step definition module names do not need to be the same as feature file 
 |   |---- functions.py<br>
 |---- Logs<br>
 |---- Screenshots<br>
+|---- requirements.txt<br>
  
  **Project Structure explanation**
  
@@ -35,6 +36,7 @@ Note: Step definition module names do not need to be the same as feature file 
  - The all common functions which are being used for automation in the step files are kept in files inside the pageactions directory.
  - Everytime we run the tests, a log file will be generated in the Logs directory about the current test results and automatically the previous logs will be deleted.
  - When certain tests fail, the screenshot will be captured and stored in the Screenshots directory followed by the deletion of the previous screenshots.
+ - The requirements.txt file contains all the dependencies for running the framework.
 
 **Software Requirements**
 
@@ -57,11 +59,11 @@ Note: Step definition module names do not need to be the same as feature file 
 - behave --tags=tagname Feature/feature/example.feature (To run particular scenarios with tags "@tagname")
 
 
-**Generating allure reports**
+**Generating allure reports in json format**
 
 - behave -f allure_behave.formatter:AllureFormatter -o %allure_result_folder% ./features
+
+**Opening the allure reports in browser**
+
 - allure serve %allure_result_folder%
-
-
-![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/42156397/122174608-7a7c7c80-cea0-11eb-9f22-ca71fe28198e.gif)
 
