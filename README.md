@@ -47,10 +47,9 @@ Note: Step definition module names do not need to be the same as feature file 
 - allure-behave
 
 
-**Installation**
+**Installation of all the dependencies from the requirements.txt file**
 
-- pip install behave
-- pip install allure-behave
+- pip install -r requirements.txt
 
 **Running the test cases**
 
