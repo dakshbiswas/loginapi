@@ -1,14 +1,14 @@
-**Numerator Adlake collection Automation**
+# Numerator Adlake collection Automation
 
-**Methodology and Framework**
+## Methodology and Framework
 
 Behavior-driven development (or BDD) is an agile software development technique that encourages collaboration between developers, QA and non-technical or business participants in a software project. We have a page further describing this philosophy.
-Since behave is an opinionated framework, it has a very opinionated project structure. All code must be located under a directory named “features”. Gherkin feature files and the “environment.py” file for hooks must appear under “features”, and step definition modules must appear under “features/steps”. Configuration files can store common execution settings and even override the path to the “features” directory.
+Since behave is an opinionated framework, it has a very opinionated project structure. All code must be located under a directory named “Features”. Gherkin feature files must appear under “Features/features” and the “environment.py” file for hooks must appear under “Features”, and step definition modules must appear under “Features/steps”. Configuration files can store common execution settings and even override the path to the “Features” directory.
 Note: Step definition module names do not need to be the same as feature file names. Any step definition can be used by any feature file within the same project.
 
-**Project Structure**
+## Project Structure
 
-[project root directory]<br>
+ [project root directory]<br>
 |‐‐-- allure_reports<br>
 |‐‐-- Drivers<br>
 |   |---- *.exe<br>
@@ -24,10 +24,10 @@ Note: Step definition module names do not need to be the same as feature file 
 |   |---- functions.py<br>
 |---- Logs<br>
 |---- Screenshots<br>
+|---- StaticResources<br>
 |---- requirements.txt<br>
  
- **Project Structure explanation**
- 
+## Project Structure explanation
  
  - The reports generated from the command described below will generate the reports in the allure_reports directory.<br>
  - All the Drivers are kept in the drivers folder.<br>
@@ -37,8 +37,9 @@ Note: Step definition module names do not need to be the same as feature file 
  - Everytime we run the tests, a log file will be generated in the Logs directory about the current test results and automatically the previous logs will be deleted.
  - When certain tests fail, the screenshot will be captured and stored in the Screenshots directory followed by the deletion of the previous screenshots.
  - The requirements.txt file contains all the dependencies for running the framework.
+ - All the static files used in the project for testing different scenarios are stored in the StaticResources directory. So, that the test cases are not machine dependent.
 
-**Software Requirements**
+## Software/Tools Requirements
 
 - Pycharm
 - Python3
@@ -47,22 +48,22 @@ Note: Step definition module names do not need to be the same as feature file 
 - allure-behave
 
 
-**Installation of all the dependencies from the requirements.txt file**
+## Installation of all the dependencies from the requirements.txt file
 
 - pip install -r requirements.txt
 
-**Running the test cases**
+## Running the test cases
 
 - behave                               (for running all the feature files in the project)
 - behave Feature/feature/example.feature (to run a particular feature file)
 - behave --tags=tagname Feature/feature/example.feature (To run particular scenarios with tags "@tagname")
 
 
-**Generating allure reports in json format**
+## Generating allure reports in json format
 
 - behave -f allure_behave.formatter:AllureFormatter -o %allure_result_folder% ./features
 
-**Opening the allure reports in browser**
+## Opening the allure reports in browser
 
 - allure serve %allure_result_folder%
 
